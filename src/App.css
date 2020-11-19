@@ -39,6 +39,11 @@
    animation: open-box-up 2s ease forwards;
 }
 
+.activate-close-up {
+   top: -25vh;
+   animation: open-box-up 2s ease reverse forwards;
+}
+
 @keyframes open-box-up {
    100% {
       top: -25vh;
