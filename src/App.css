@@ -1,78 +1,92 @@
 .App {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+   width: 100%;
+   height: 100vh;
+   position: relative;
 
-  background-color: blueviolet;
-  background-image: url('./assets/peepo.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
+   background-color: blueviolet;
+   background-image: url("./assets/peepo.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   overflow: hidden;
+}
+
+.button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 1;
 }
 
 .block {
-  width: 70%;
-  height: 50%;
-  background-color: teal;
+   width: 70%;
+   height: 50%;
+   background-color: teal;
 }
 
 .triangle {
-  z-index: 1;
+   z-index: 1;
 }
 
 .up {
-  position: absolute;
-  top: -25vh;
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  animation: close-box-up 2s ease forwards;
+   position: absolute;
+   top: 0vh;
+   display: flex;
+   height: 100vh;
+   width: 100%;
 }
 
-@keyframes close-box-up {
-  100% {
-    top: -25vh
-  }
+.activate-open-up {
+   animation: open-box-up 2s ease forwards;
+}
 
-  0% {
-    top: 0
-  }
+@keyframes open-box-up {
+   100% {
+      top: -25vh;
+   }
+
+   0% {
+      top: 0;
+   }
 }
 
 .up .triangle {
-  width: 30%;
-  height: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
-  background-color: teal;
+   width: 30%;
+   height: 100%;
+   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
+   background-color: teal;
 }
 
 .down {
-  position: absolute;
-  display: flex;
-  align-items: flex-end;
-  bottom: -25vh;
-  height: 100vh;
-  width: 100%;
-  animation: close-box-down 2s ease forwards;
+   position: absolute;
+   display: flex;
+   align-items: flex-end;
+   bottom: 0vh;
+   height: 100vh;
+   width: 100%;
 }
 
-@keyframes close-box-down {
-  100% {
-    bottom: -25vh
-  }
+.activate-open-down {
+   animation: open-box-down 2s ease forwards;
+}
 
-  0% {
-    bottom: 0
-  }
+@keyframes open-box-down {
+   100% {
+      bottom: -25vh;
+   }
+
+   0% {
+      bottom: 0;
+   }
 }
 
 .down .triangle {
-  width: 30%;
-  height: 100%;
-  clip-path: polygon(0 50%, 100% 25%, 100% 100%, 0 100%);
-  background-color: rgb(128, 47, 0);
+   width: 30%;
+   height: 100%;
+   clip-path: polygon(0 50%, 100% 25%, 100% 100%, 0 100%);
+   background-color: rgb(128, 47, 0);
+   border: 1px solid rgb(128, 47, 0);
 }
 
 .down .block {
-  background-color: rgb(128, 47, 0);
+   background-color: rgb(128, 47, 0);
 }
