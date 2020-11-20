@@ -11,7 +11,7 @@ function App() {
    };
 
    return (
-      <div className="App">
+      <div className="App" onClick={switchPosition}>
          <div className={open ? "up activate-open-up" : "up"}>
             <div className="triangle"></div>
             <div className="block"></div>
@@ -20,9 +20,6 @@ function App() {
             <div className="block"></div>
             <div className="triangle"></div>
          </div>
-         <button className="button" onClick={switchPosition}>
-            Activate
-         </button>
       </div>
    );
 }
