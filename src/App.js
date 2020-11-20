@@ -6,22 +6,13 @@ function App() {
    const [first, setFirst] = useState(true);
 
    const switchPosition = () => {
-      setFirst(false);
       setOpen(!open);
       console.log(!open);
    };
 
    return (
       <div className="App">
-         <div
-            className={
-               !first
-                  ? open
-                     ? "up activate-open-up"
-                     : "up activate-close-up"
-                  : "up"
-            }
-         >
+         <div className={open ? "up activate-open-up" : "up"}>
             <div className="triangle"></div>
             <div className="block"></div>
          </div>
